@@ -1,0 +1,23 @@
+{
+
+    "value": 0,
+    "list": [
+	"a",
+	"b",
+	"c",
+	3
+    ],
+    "object": {
+	"spec6to8": "test",
+	"spec9to11": 234,
+	"spec12to13": "testing",
+	"spec14to15": 12345,
+	"spec16": "testing",
+	"spec17": 12345,
+	"spec18": 123,
+	"spec19": 0,
+	"spec20": [1,2,0]
+    },
+    "additional": "test"
+
+}

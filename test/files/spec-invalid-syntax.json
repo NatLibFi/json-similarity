@@ -1,0 +1,11 @@
+{
+    "treshold": 5,
+    "tests": [
+	{
+	    "true": 5,
+	    "false": -5,
+	    "path": 0
+	}
+
+    ]
+}

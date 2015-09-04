@@ -1,0 +1,122 @@
+{
+    "type": "object",
+    "properties": {
+	"treshold": {
+	    "type": "number"
+	},
+	"tests": {
+	    "type": "array",
+	    "items": {
+		"$ref": "#/definitions/test"
+	    }
+	}
+    },
+    "required": ["treshold", "tests"],
+    "definitions": {
+
+	"test": {
+	    "anyOf": [
+		{
+		    "type": "object",
+		    "properties": {
+			
+			"true": {
+			    "type": "number"
+			},
+			"false": {
+			    "type": "number"
+			},
+			"path": {
+			    "type": "string"
+			},
+			"options": {
+			    "type": "object"
+			}
+			
+		    },
+		    "required": [
+			"path",
+			"true",
+			"false"
+		    ]
+		},
+		{
+		    "type": "object",
+		    "properties": {
+			
+			"true": {
+			    "type": "number"
+			},
+			"path": {
+			    "type": "string"
+			},
+			"options": {
+			    "type": "object"
+			}
+			
+		    },
+		    "required": [
+			"path",
+			"true"
+		    ]
+		},
+		{
+		    "type": "object",
+		    "properties": {
+			
+			"false": {
+			    "type": "number"
+			},
+			"path": {
+			    "type": "string"
+			},
+			"options": {
+			    "type": "object"
+			}
+			
+		    },
+		    "required": [
+			"path",
+			"false"
+		    ]
+		}
+	    ]
+	},
+	"options": {
+	    "type": "object",
+	    "properties": {
+
+		"trim": {
+		    "type": "object",
+		    "properties": {
+
+			"chars": {
+			    "type": "strings"
+			},
+			"side": {
+
+			    "description": "If this property is undefined, trim on both ends of the value. If 0, trim from the beginning only. if 1, trim from the end",
+			    "type": "number",
+			    "minimum": 0,
+			    "maximum": 1
+
+			}
+
+		    },
+		    "required": ["chars"]
+		},
+		"truncate": {
+		    "type": "number"
+		},
+		"strict": {
+		    "type": "boolean"
+		},
+		"order": {
+		    "type": "boolean"
+		}
+
+	    }
+	}
+
+    }
+}

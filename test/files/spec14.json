@@ -1,0 +1,15 @@
+{
+
+    "treshold": 2,
+    "tests": [
+	{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.object.spec14to15",
+	    "options": {
+		"truncate": 5
+	    }
+	}
+    ]
+
+}
