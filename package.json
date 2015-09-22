@@ -1,22 +1,37 @@
 {
     "name": "json-similarity",
+    "description": "Compute similarity of JSON objects with tests that yield points",
+    "author": {
+	"name": "The National Library of Finland"
+    },
+    "keywords": [
+    ],
+    "homepage": "https://github.com/NatLibFi/json-similarity",
+    "bugs": {
+	"url": "https://github.com/NatLibFi/json-similarity/issues"
+    },
+    "repository": {
+	"type": "git",
+	"url": "git@github.com:NatLibFi/json-similarity.git"
+    },
+    "license": " GPL-3.0",
     "version": "0.0.1",
     "main": "lib/main",
-    "bin": "bin/json-similarity",
+    "bin": "./bin/json-similarity",
     "dependencies": {
-	"amdefine": "0.1.*",
-	"jsonpath": "0.1.*",
-	"object-comparison": "https://github.com/NatLibFi/object-comparison",
-	"json-schema-config": "https://github.com/NatLibFi/json-schema-config"
+	"jjv": ">=1.0.2 <1.2",
+	"jjve": "^0.5.0",
+	"jsonpath": "^0.2.0",
+	"object-comparison": "https://github.com/NatLibFi/object-comparison"
     },
     "devDependencies": {
-	"expect.js": "0.3.*",
-	"grunt": "0.4.*",
-	"jshint": "2.7.*",
-	"mocha": "2.2.*",
-	"istanbul": "0.3.*",
-	"grunt-contrib-jshint": "0.11.*",
-	"grunt-mocha-test": "0.12.*",
-	"grunt-mocha-istanbul": "2.4.*"
+	"chai": "^3.2.0",
+	"grunt": "^0.4.5",
+	"jshint": "^2.8.0",
+	"mocha": "^2.3.2",
+	"istanbul": "^0.3.20",
+	"grunt-contrib-jshint": "^0.11.3",
+	"grunt-mocha-test": "^0.12.7",
+	"grunt-mocha-istanbul": ">=3.0.1 <3.2"
     }
 }

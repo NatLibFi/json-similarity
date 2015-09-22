@@ -91,7 +91,7 @@
 		    "properties": {
 
 			"chars": {
-			    "type": "strings"
+			    "type": "string"
 			},
 			"side": {
 
