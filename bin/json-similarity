@@ -1,4 +1,5 @@
 #!/usr/bin/env node                                                                                           
+#
 # Compute similarity of JSON objects with tests that yield points                            
 #                                                                                            
 # Copyright (c) 2015 University Of Helsinki (The National Library Of Finland)                
