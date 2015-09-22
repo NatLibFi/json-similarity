@@ -2,6 +2,8 @@
 
 Compute similarity of JSON objects with tests that yield points. Each test add or subtracts points. If total number of points becomes less than the treshold, the objects are deemed not similar. If all tests pass without the total number of points becoming less than the treshold, the objects are similar.
 
+This program uses JSONPath implementation from [dchester/jsonpath](https://github.com/dchester/jsonpath).
+
 ## Usage
 
 The module returns a single function which, when run, returns an object with the following properties:
@@ -40,7 +42,7 @@ An array of tests to be run. Each test is an object which can have the following
 
 * **true** (*number*): Number of points to be added if the test succeeds (If omitted the points are added only if the test fails).
 * **false** (*number*): Number of points to be added if the test fails (If omitted the points are added only if the test succeeds).
-* **path** (*string*): **Mandatory** The path to test for.
+* **path** (*string*): **Mandatory** The path to test for. Path follows the [JSONPath specification](http://goessner.net/articles/JsonPath/).
 * **options** (*object*): Options can have the following properties:
   * **trim** (*object*): Operates on strings and numbers
     * **chars** (*string*): Characters to trims
