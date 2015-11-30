@@ -40,12 +40,12 @@ Number of points that is expected to be reached for the records to be deemed sim
 #### tests (*array*)
 An array of tests to be run. Each test is an object which can have the following properties:
 
-* **true** (*number*): Number of points to be added if the test succeeds (If omitted the points are added only if the test fails).
-* **false** (*number*): Number of points to be added if the test fails (If omitted the points are added only if the test succeeds).
+* **true** (*number*): Number of points to be added if the test succeeds (If omitted the points are added only if the test fails). Use a negative number for subtraction.
+* **false** (*number*): Number of points to be added if the test fails (If omitted the points are added only if the test succeeds). Use a negative number for subtraction.
 * **path** (*string*): **Mandatory** The path to test for. Path follows the [JSONPath specification](http://goessner.net/articles/JsonPath/).
 * **options** (*object*): Options can have the following properties:
   * **trim** (*object*): Operates on strings and numbers
-    * **chars** (*string*): Characters to trims
+    * **chars** (*string*): Characters to trim
     * **side** (*number*): If 0, trim from beginning of the property. If 1, trim from the end. If undefined, trim from both ends
   * **truncate** (*number*): Number of characters to truncate the target property to. Posite values truncate from the beginning, negative from the end. Operates on strings and numbers;
   * **strict** (*boolean*): Compare properties with strict equality (===)
