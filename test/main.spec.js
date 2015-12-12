@@ -333,5 +333,33 @@ function factory(chai, fs, jsonSimilarity)
 
 	});
 
+	it('Should return a false match and 0 points as the test is skipped because both values are undefined', function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec21.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: false,
+		points: 2
+	    });
+
+	});
+
+	it('Should return a false match and 0 points as the test is skipped because the other is undefined and skipMissing is true', function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec22.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: false,
+		points: 2
+	    });
+
+	});
+
+
+
     });
 }

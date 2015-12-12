@@ -1,0 +1,12 @@
+{
+
+    "treshold": 2,
+    "tests": [
+	{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.object.spec21"
+	}
+    ]
+
+}

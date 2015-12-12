@@ -113,8 +113,10 @@
 		},
 		"order": {
 		    "type": "boolean"
+		},
+		"skipMissing": {
+		    "type": "boolean"
 		}
-
 	    }
 	}
 
