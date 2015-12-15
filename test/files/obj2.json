@@ -17,7 +17,11 @@
 	"spec18": "test123a",
 	"spec19": "0",
 	"spec20": [0,1,2],
-	"spec22": "foo"
+	"spec22": "foo",
+	"spec23": "foobar",
+	"spec24": 102,
+	"spec25": ["foo", "bar", 3, "fubar"],
+	"spec26": "foobar"
     },
     "additional": {}
 

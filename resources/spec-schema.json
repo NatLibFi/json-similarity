@@ -116,6 +116,46 @@
 		},
 		"skipMissing": {
 		    "type": "boolean"
+		},
+		"extract": {
+		    "anyOf": [
+			{
+			    "type": "object",
+			    "properties": {
+				"start": {
+				    "type": "number"
+				},
+				"end": {
+				    "type": "number"
+				}
+			    },
+			    "required": ["start", "end"]
+			},
+			{
+			    "type": "object",
+			    "properties": {
+				"start": {
+				    "type": "number"
+				},
+				"end": {
+				    "type": "number"
+				}
+			    },
+			    "required": ["start"]
+			},
+			{
+			    "type": "object",
+			    "properties": {
+				"start": {
+				    "type": "number"
+				},
+				"end": {
+				    "type": "number"
+				}
+			    },
+			    "required": ["end"]
+			}
+		    ]
 		}
 	    }
 	}

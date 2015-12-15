@@ -1,0 +1,18 @@
+{
+
+    "treshold": 2,
+    "tests": [
+	{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.object.spec25",
+	    "options": {
+		"extract": {
+		    "start": 2,
+		    "end": 1
+		}
+	    }
+	}
+    ]
+
+}

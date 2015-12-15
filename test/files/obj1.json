@@ -16,7 +16,11 @@
 	"spec17": 12345,
 	"spec18": 123,
 	"spec19": 0,
-	"spec20": [1,2,0]
+	"spec20": [1,2,0],
+	"spec23": "foo",
+	"spec24": 102345,
+	"spec25": [1,2,3],
+	"spec26": {}
     },
     "additional": "test"
 
