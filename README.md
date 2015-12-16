@@ -50,6 +50,7 @@ An array of tests to be run. Each test is an object which can have the following
   * **truncate** (*number*): Number of characters to truncate the target property to. Posite values truncate from the beginning, negative from the end. Operates on strings and numbers;
   * **strict** (*boolean*): Compare properties with strict equality (===)
   * **order** (*boolean*): Require elements to be in the same order when comparing array properties
+  * **caseSensitive** (*boolean*): Compare string values case-sensitively (Defaults to true)
 
 ### Examples
 
