@@ -130,11 +130,11 @@
 				"start": {
 				    "type": "number"
 				},
-				"end": {
+				"length": {
 				    "type": "number"
 				}
 			    },
-			    "required": ["start", "end"]
+			    "required": ["start", "length"]
 			},
 			{
 			    "type": "object",
@@ -142,7 +142,7 @@
 				"start": {
 				    "type": "number"
 				},
-				"end": {
+				"length": {
 				    "type": "number"
 				}
 			    },
@@ -154,11 +154,11 @@
 				"start": {
 				    "type": "number"
 				},
-				"end": {
+				"length": {
 				    "type": "number"
 				}
 			    },
-			    "required": ["end"]
+			    "required": ["length"]
 			}
 		    ]
 		},

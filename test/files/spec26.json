@@ -9,7 +9,7 @@
 	    "options": {
 		"extract": {
 		    "start": 2,
-		    "end": 1
+		    "length": 1
 		}
 	    }
 	}
