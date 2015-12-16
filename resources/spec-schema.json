@@ -13,7 +13,6 @@
     },
     "required": ["treshold", "tests"],
     "definitions": {
-
 	"test": {
 	    "anyOf": [
 		{
@@ -162,9 +161,21 @@
 			    "required": ["end"]
 			}
 		    ]
+		},
+		"multimatch": {
+		    "type": "object",
+		    "properties": {
+			"percentage": {
+			    "type": "number",
+			    "maximum": 100,
+			    "minimum": 0
+			},
+			"leastTotal": {
+			    "type": "boolean"
+			}
+		    }
 		}
 	    }
 	}
-
     }
 }
