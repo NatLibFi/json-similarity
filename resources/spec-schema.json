@@ -114,6 +114,9 @@
 		"order": {
 		    "type": "boolean"
 		},
+		"caseSensitive": {
+		    "type": "boolean"
+		}
 		"skipMissing": {
 		    "type": "boolean"
 		},
