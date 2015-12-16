@@ -21,7 +21,8 @@
 	"spec23": "foobar",
 	"spec24": 102,
 	"spec25": ["foo", "bar", 3, "fubar"],
-	"spec26": "foobar"
+	"spec26": "foobar",
+	"spec27": ["foo", "bar"]
     },
     "additional": {}
 

@@ -117,6 +117,9 @@
 		"skipMissing": {
 		    "type": "boolean"
 		},
+		"singleValue": {
+		    "type": "boolean"
+		},
 		"extract": {
 		    "anyOf": [
 			{

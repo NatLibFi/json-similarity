@@ -411,5 +411,18 @@ function factory(chai, fs, jsonSimilarity)
 
 	});
 
+	it("Should return a true match and 4 points because the other object's multivalue is reduced to single value", function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec27.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: true,
+		points: 4
+	    });
+
+	});
+
     });
 }
