@@ -115,7 +115,7 @@
 		},
 		"caseSensitive": {
 		    "type": "boolean"
-		}
+		},
 		"skipMissing": {
 		    "type": "boolean"
 		},

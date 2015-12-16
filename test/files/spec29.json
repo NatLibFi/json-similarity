@@ -1,0 +1,17 @@
+{
+
+    "treshold": 2,
+    "tests": [
+	{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.object.spec28to30",
+	    "options": {
+		"multimatch": {
+		    "percentage": 80
+		}
+	    }
+	}
+    ]
+
+}

@@ -340,7 +340,7 @@ function factory(chai, fs, jsonSimilarity)
 	    var spec = JSON.parse(fs.readFileSync('test/files/spec21.json', {encoding: 'utf8'}));
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
-		match: false,
+		match: true,
 		points: 2
 	    });
 
@@ -354,7 +354,7 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 2
+		points: 0
 	    });
 
 	});
@@ -385,19 +385,6 @@ function factory(chai, fs, jsonSimilarity)
 
 	});
 
-	it('Should return a true match and 2 points because extracted array values match', function() {
-
-	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
-	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
-	    var spec = JSON.parse(fs.readFileSync('test/files/spec25.json', {encoding: 'utf8'}));
-
-	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
-		match: true,
-		points: 4
-	    });
-
-	});
-
 	it("Should return a false match and 0 points because other object's value cannot be extracted", function() {
 
 	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
@@ -416,6 +403,45 @@ function factory(chai, fs, jsonSimilarity)
 	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
 	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
 	    var spec = JSON.parse(fs.readFileSync('test/files/spec27.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: true,
+		points: 4
+	    });
+
+	});
+
+	it('Should return a false match and 0 points because the multivalue percentage average not 100% (Default)', function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec28.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: false,
+		points: 0
+	    });
+
+	});
+
+	it('Should return a false match and 0 points because the multivalue percentage average is not large enough', function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec29.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: false,
+		points: 0
+	    });
+
+	});
+
+	it('Should return a true match and 4 points because the multivalue percentage average is large enough (Because leastTotal-option is true', function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec30.json', {encoding: 'utf8'}));
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,

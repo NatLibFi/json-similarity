@@ -5,11 +5,11 @@
 	{
 	    "true": 2,
 	    "false": -2,
-	    "path": "$.object.spec25",
+	    "path": "$.object.spec28to30",
 	    "options": {
-		"extract": {
-		    "start": 2,
-		    "end": 1
+		"multimatch": {
+		    "percentage": 80,
+		    "leastTotal": true
 		}
 	    }
 	}
