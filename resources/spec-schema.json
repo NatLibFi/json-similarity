@@ -18,7 +18,12 @@
 		{
 		    "type": "object",
 		    "properties": {
-			
+			"name": {
+			    "type": "string"
+			},
+			"description": {
+			    "type": "string"
+			},
 			"true": {
 			    "type": "number"
 			},
@@ -33,6 +38,7 @@
 			}
 			
 		    },
+		    "additionalProperties": false,
 		    "required": [
 			"path",
 			"true",
@@ -42,7 +48,12 @@
 		{
 		    "type": "object",
 		    "properties": {
-			
+			"name": {
+			    "type": "string"
+			},
+			"description": {
+			    "type": "string"
+			},
 			"true": {
 			    "type": "number"
 			},
@@ -54,6 +65,7 @@
 			}
 			
 		    },
+		    "additionalProperties": false,
 		    "required": [
 			"path",
 			"true"
@@ -62,7 +74,12 @@
 		{
 		    "type": "object",
 		    "properties": {
-			
+			"name": {
+			    "type": "string"
+			},
+			"description": {
+			    "type": "string"
+			},
 			"false": {
 			    "type": "number"
 			},
@@ -74,6 +91,7 @@
 			}
 			
 		    },
+		    "additionalProperties": false,
 		    "required": [
 			"path",
 			"false"
