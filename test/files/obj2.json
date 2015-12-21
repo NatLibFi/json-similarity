@@ -21,8 +21,48 @@
 	"spec23": "foobar",
 	"spec24": 102,
 	"spec26": "foobar",
-	"spec27": ["foo", "bar"],
-	"spec28to30": ["foo", "bar", "fubar"]
+	"spec27": [
+	    {
+		"value": "foo"
+	    }
+	],
+	"spec28to30": [
+	    {
+		"value": "foo"
+	    },
+	    {
+		"value": "bar"
+	    },
+	    {
+		"value": "fubar"
+	    }
+	],
+	"spec31and33": "coobar",
+	"spec32and34": 21234,
+	"spec35": "foo",
+	"spec36": "bar",
+	"spec38": [
+	    {
+		"values": [
+		    {
+			"value": "furr"
+		    },
+		    {
+			"value": "ball"
+		    }
+		]
+	    },
+	    {
+		"values": [
+		    {
+			"value": "foo"
+		    },
+		    {
+			"value": "bar"
+		    }
+		]
+	    }
+	]
     },
     "additional": {}
 

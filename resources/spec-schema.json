@@ -190,6 +190,17 @@
 			},
 			"leastTotal": {
 			    "type": "boolean"
+			},
+			"respectHierarchy": {
+			    "anyOf": [
+				{
+				    "type": "boolean"
+				},
+				{
+				    "type": "number",
+				    "minimum": 0
+				}
+			    ]
 			}
 		    }
 		}

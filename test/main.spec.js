@@ -120,7 +120,51 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [
+		    {
+			index: 0,
+			match: true
+		    },
+		    {
+			index: 1,
+			match: false
+		    }
+		]
+	    });
+
+	});
+
+	it("Should return a true match and 2 points because no points are added for true match", function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec35.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: true,
+		points: 2,
+		tests: [{
+		    index:0,
+		    match: true
+		}]
+	    });
+
+	});
+
+	it("Should return a true match and 2 points because no points are subtracted for false match", function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec36.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: true,
+		points: 2,
+		tests: [{
+		    index:0,
+		    match: false
+		}]
 	    });
 
 	});
@@ -133,7 +177,17 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 1
+		points: 1,
+		tests: [
+		    {
+			index: 0,
+			match: true
+		    },
+		    {
+			index: 1,
+			match: false
+		    }
+		]
 	    });
 
 	});
@@ -146,7 +200,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 
 	});
@@ -159,7 +217,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 0
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false
+		}]
 	    });
 
 	});
@@ -172,7 +234,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 
 	});
@@ -185,7 +251,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 
 	});
@@ -198,7 +268,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 
 	});
@@ -211,7 +285,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 0
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false		    
+		}]
 	    });
 
 	});
@@ -224,7 +302,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 
 	});
@@ -237,7 +319,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 0
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false
+		}]
 	    });
 
 	});
@@ -250,7 +336,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 
 	});
@@ -263,7 +353,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 0
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false
+		}]
 	    });
 
 	});
@@ -276,7 +370,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 	    
 	});
@@ -289,7 +387,11 @@ function factory(chai, fs, jsonSimilarity)
 	    
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 	    
 	});
@@ -302,7 +404,11 @@ function factory(chai, fs, jsonSimilarity)
 	    
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 	    
 	});
@@ -315,7 +421,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 0
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false
+		}]
 	    });
 
 	});
@@ -328,7 +438,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 
 	});
@@ -341,20 +455,45 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 2
+		points: 2,
+		tests: [{
+		    index: 0,
+		    skipped: true
+		}]
 	    });
 
 	});
 
-	it('Should return a false match and 0 points as the test is skipped because the other is undefined and skipMissing is true', function() {
+	it('Should return a true match and 2 points as the test is skipped because the first value is undefined and skipMissing is true', function() {
 
 	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
 	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
 	    var spec = JSON.parse(fs.readFileSync('test/files/spec22.json', {encoding: 'utf8'}));
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
-		match: false,
-		points: 0
+		match: true,
+		points: 2,
+		tests: [{
+		    index: 0,
+		    skipped: true
+		}]
+	    });
+
+	});
+
+	it('Should return a true match and 2 points as the test is skipped because the second value is undefined and skipMissing is true', function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec37.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: true,
+		points: 2,
+		tests: [{
+		    index: 0,
+		    skipped: true
+		}]
 	    });
 
 	});
@@ -367,7 +506,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 
 	});
@@ -380,7 +523,79 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index:0,
+		    match: true
+		}]
+	    });
+
+	});
+
+	it("Should return a false match and 0 points because extracted (With default value for 'start') string values do not match", function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec31.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: false,
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false
+		}]
+	    });
+
+	});
+
+	it("Should return a false match and 0 points because extracted (With default value for 'start') number values do not match", function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec32.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: false,
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false
+		}]
+	    });
+
+	});
+
+	it("Should return a true match and 2 points because extracted (With default value for  'length') string values match", function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec33.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: true,
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
+	    });
+
+	});
+
+	it("Should return a true match and 2 points because extracted (With default value for 'length') number values match", function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec34.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: true,
+		points: 4,
+		tests: [{
+		    index:0,
+		    match: true
+		}]
 	    });
 
 	});
@@ -393,7 +608,11 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 0
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false
+		}]
 	    });
 
 	});
@@ -406,12 +625,16 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
 	    });
 
 	});
 
-	it('Should return a false match and 0 points because the multivalue percentage average not 100% (Default)', function() {
+	it('Should return a false match and 0 points because the multivalue percentage average is not 100% (Default)', function() {
 
 	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
 	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
@@ -419,7 +642,12 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 0
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false,
+		    multimatchPercentage: 70.83333333333333
+		}]
 	    });
 
 	});
@@ -432,7 +660,12 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: false,
-		points: 0
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false,
+		    multimatchPercentage: 70.83333333333333
+		}]
 	    });
 
 	});
@@ -445,7 +678,30 @@ function factory(chai, fs, jsonSimilarity)
 
 	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
 		match: true,
-		points: 4
+		points: 4,
+		tests: [{
+		    index: 0,
+		    match: true,
+		    multimatchPercentage: 83.33333333333333
+		}]
+	    });
+
+	});
+
+	it("Should return a false match and 0 points because the first object's multivalue does not have enough hierarchical matches", function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec38.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: false,
+		points: 0,
+		tests: [{
+		    index: 0,
+		    match: false,
+		    multimatchPercentage: 50
+		}]
 	    });
 
 	});

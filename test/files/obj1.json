@@ -1,5 +1,4 @@
 {
-
     "value": 0,
     "list": [
 	"a",
@@ -20,9 +19,55 @@
 	"spec23": "foo",
 	"spec24": 102345,
 	"spec26": {},
-	"spec27": "foo",
-	"spec28to30": ["foo", "bar", "fu", "bar"]
+	"spec27": [
+	    {
+		"value": "foo"
+	    },
+	    {
+		"value": "bar"
+	    }
+	],
+	"spec28to30": [
+	    {
+		"value": "foo"
+	    },
+	    {
+		"value": "bar"
+	    },
+	    {
+		"value": "fu"
+	    },
+	    {
+		"value": "bar"
+	    }
+	],
+	"spec31and33": "foobar",
+	"spec32and34": 11234,
+	"spec35": "foo",
+	"spec35": "foo",
+	"spec37": "foobar",
+	"spec38": [
+	    {
+		"values": [
+		    {
+			"value": "foo"
+		    },
+		    {
+			"value": "bar"
+		    }
+		]
+	    },
+	    {
+		"values": [
+		    {
+			"value": "fu"
+		    },
+		    {
+			"value": "bar"
+		    }
+		]
+	    }
+	]
     },
     "additional": "test"
-
 }
