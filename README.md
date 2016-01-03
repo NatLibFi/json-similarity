@@ -1,5 +1,7 @@
 # JSON similarity
 
+**IN DEVELOPMENT**
+
 Compute similarity of JSON objects with tests that yield points. Each test add or subtracts points. If total number of points becomes less than the treshold, the objects are deemed not similar. If all tests pass without the total number of points becoming less than the treshold, the objects are similar.
 
 This program uses JSONPath implementation from [dchester/jsonpath](https://github.com/dchester/jsonpath).
