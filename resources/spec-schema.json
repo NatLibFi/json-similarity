@@ -24,6 +24,9 @@
 			"description": {
 			    "type": "string"
 			},
+			"disabled": {
+			    "type": "boolean"
+			},
 			"true": {
 			    "type": "number"
 			},
@@ -54,6 +57,9 @@
 			"description": {
 			    "type": "string"
 			},
+			"disabled": {
+			    "type": "boolean"
+			},
 			"true": {
 			    "type": "number"
 			},
@@ -79,6 +85,9 @@
 			},
 			"description": {
 			    "type": "string"
+			},
+			"disabled": {
+			    "type": "boolean"
 			},
 			"false": {
 			    "type": "number"

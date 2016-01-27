@@ -192,6 +192,8 @@ function factory(chai, fs, jsonSimilarity)
 
 	});
 
+	it("Should skip disabled tests");
+
 	it('Should return a true match and 4 points because strings are now trimmed', function() {
 
 	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
