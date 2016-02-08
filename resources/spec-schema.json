@@ -134,6 +134,21 @@
 		"truncate": {
 		    "type": "number"
 		},
+		"replace": {
+		    "type": "object",
+		    "properties": {
+			"pattern": {
+			    "type": "string"
+			},
+			"replacement": {
+			    "type": "string"
+			},
+			"flags": {
+			    "type": "string"
+			}
+		    },
+		    "required": ["pattern", "replacement"]
+		},
 		"strict": {
 		    "type": "boolean"
 		},

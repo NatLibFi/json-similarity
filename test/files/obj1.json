@@ -67,7 +67,9 @@
 		    }
 		]
 	    }
-	]
+	],
+	"spec39and40": "foobar",
+	"spec41": "foobar"
     },
     "additional": "test"
 }

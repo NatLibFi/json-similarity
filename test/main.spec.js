@@ -415,6 +415,57 @@ function factory(chai, fs, jsonSimilarity)
 	    
 	});
 	
+	it("Should return a false match and -2 points because RegExp replacement doesn't match", function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec39.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: false,
+		points: -2,
+		tests: [{
+		    index: 0,
+		    match: false
+		}]
+	    });
+
+	});
+
+	it('Should return a true match and 2 points because other value is replaced by case-insensitive RegExp', function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec40.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: true,
+		points: 2,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
+	    });
+
+	});
+
+	it('Should return a true match and 2 points because other (numeric) value is replaced by RegExp', function() {
+
+	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
+	    var obj2 = JSON.parse(fs.readFileSync('test/files/obj2.json', {encoding: 'utf8'}));
+	    var spec = JSON.parse(fs.readFileSync('test/files/spec41.json', {encoding: 'utf8'}));
+
+	    expect(jsonSimilarity(obj1, obj2, spec)).to.eql({
+		match: true,
+		points: 2,
+		tests: [{
+		    index: 0,
+		    match: true
+		}]
+	    });
+
+	});
+
 	it('Should return a false match and 0 points because values are compared strictly', function() {
 
 	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
