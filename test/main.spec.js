@@ -687,6 +687,8 @@ function factory(chai, fs, jsonSimilarity)
 
 	});
 
+	it('Should return a true match and 4 points because the multivalues are modified');
+
 	it('Should return a false match and 0 points because the multivalue percentage average is not 100% (Default)', function() {
 
 	    var obj1 = JSON.parse(fs.readFileSync('test/files/obj1.json', {encoding: 'utf8'}));
