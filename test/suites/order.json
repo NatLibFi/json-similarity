@@ -1,0 +1,28 @@
+{
+  "description": "Should return a true match and 4 points because array values are not compared in order",
+  "objectA": {
+    "foo": [1, 2, 3]
+  },
+  "objectB": {
+    "foo": [1, 3, 2]
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.foo",
+	    "options": {
+        "order": false
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 4,
+    "tests": [{
+      "index": 0,
+      "match": true
+    }]
+  }
+}

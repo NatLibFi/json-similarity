@@ -1,0 +1,22 @@
+{
+  "description": "Should return a true match and 2 points because no points are subtracted for false match",
+  "objectA": {
+    "foo": "bar"
+  },
+  "objectB": {},
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "path": "$"
+	  }]
+  },
+  "result": {
+    "match": true,
+    "points": 2,
+    "tests": [{
+      "index": 0,
+      "match": false
+    }]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "description": "Should return a false match and 0 points because extracted (With default value for 'start') string values do not match",
+  "objectA": {
+    "foo": "bar"
+  },
+  "objectB": {
+    "foo": "fubar"
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+      "path": "$.foo",
+      "options": {
+        "extract": {
+          "length": 2
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": false,
+    "points": 0,
+    "tests": [{
+      "index": 0,
+      "match": false
+    }]
+  }
+}

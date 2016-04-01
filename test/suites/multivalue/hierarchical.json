@@ -1,0 +1,73 @@
+{
+  "description": "Should return a false match and 0 points because the first object's multivalue does not have enough hierarchical matches",
+  "objectA": {
+    "foo": [
+	    {
+		    "values": [
+		      {
+			      "value": "foo"
+		      },
+		      {
+			      "value": "bar"
+		      }
+		    ]
+	    },
+	    {
+		    "values": [
+		      {
+			      "value": "fu"
+		      },
+		      {
+			      "value": "bar"
+		      }
+		    ]
+	    }
+	  ]
+  },
+  "objectB": {
+    "foo": [
+	    {
+		    "values": [
+		      {
+			      "value": "furr"
+		      },
+		      {
+			      "value": "ball"
+		      }
+		    ]
+	    },
+	    {
+		    "values": [
+		      {
+			      "value": "foo"
+		      },
+		      {
+			      "value": "bar"
+		      }
+		    ]
+	    }
+	  ]
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+      "path": "$.foo[*].values[*].value",
+      "options": {
+        "multimatch": {
+          "respectHierarchy": 1
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": false,
+    "points": 0,
+    "tests": [{
+      "index": 0,
+      "match": false,
+      "multimatchPercentage": 50
+    }]
+  }
+}

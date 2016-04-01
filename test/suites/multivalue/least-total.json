@@ -1,0 +1,54 @@
+{
+  "description": "Should return a true match and 4 points because the multivalue percentage average is large enough (Because leastTotal-option is true",
+  "objectA": {
+    "bar": [
+      {
+        "value": "fing"
+      },
+      {
+        "value": "fang"
+      },
+      {
+        "value": "foom"
+      }
+    ]
+  },
+  "objectB": {
+    "bar": [
+      {
+        "value": "fing"
+      },
+      {
+        "value": "fang"
+      },
+      {
+        "value": "foom"
+      },
+      {
+        "value": "foo"
+      }
+    ]
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.bar[*].value",
+      "options": {
+        "multimatch": {
+          "leastTotal": true
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 4,
+    "tests": [{
+      "index": 0,
+      "match": true,
+      "multimatchPercentage": 100
+    }]
+  }
+}

@@ -1,0 +1,8 @@
+language: node_js
+node_js: "0.12"
+script: npm run travisci
+after_script:
+  - codeclimate-test-reporter < coverage/combined/lcov.info
+addons:
+  code_climate:
+    secure: "MXi3pGqK299m9m7nJDIZNYY5oxiAG6MlUjwV83wBuyQWLzCdFVV2455V27JYCDN7A1FzhTy+mYNGZ9xhgN0BEktYdDnugKslU5aTTMTdDk5DpFfM+znVGV00/n7lyhf8JS+W1pvzgJKKiBByLCbyEe7DyCyC2u60+896OiU/lzd9yNYH2bGhd/ysCp1EuUKKp7CTDPUgwfwoud+Mh1Y57W1W6hPuBIeMk6Gk5GhX4E21xzoMJ6wUUDPGEHCuJIHP/o9jc663yzZ2o3wRWipoE5ktkp+Hji9ra5tf1cBO31SumnZHZBfk0IWyWI4J/bQeRHwkvO0EqLCa/RS+mi0pBEUWkrjcDHsntA5cfcmFP81xdQkPV5pAwtWnWqhkBN52fGMjG3YEJ6ylbKkess5xLvPUbLS2v3IWE+6ERF3vwvHTkaNlP+4mr/DXf6Fi72Kslc1Q4YsclDu5EMS3+IVuDjN8rNOyGTnLY9CJW67clZOjbkgTzG4BT0VEoT23iTx13gpeLsZm2Bqg7QfM1YJCd45Z+RegYxN/sYLtS2B6PvBRxgXR0KgE1Ca+YI/N2TMelDsGIJcBC6jPQKpOhnWZGDxsl9Gg+Fnpwlmfdj6Vly75GBfmR5kqLAXQhU7+ry7zlAj0Ir/fjqjxTmyVpc+R0f53UAdv5iSIq/JPwXb68oQ="

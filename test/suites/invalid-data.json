@@ -1,0 +1,14 @@
+{
+  "description": "Should throw because of invalid object",
+  "objectA": {},
+  "objectB": null,
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "path": "$"
+	  }]
+  },
+  "error": "AssertionError: obj needs to be an object"
+  
+}

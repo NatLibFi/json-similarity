@@ -1,234 +1,241 @@
 {
-    "type": "object",
-    "properties": {
-	"treshold": {
-	    "type": "number"
-	},
-	"tests": {
-	    "type": "array",
-	    "items": {
-		"$ref": "#/definitions/test"
-	    }
-	}
+  "type": "object",
+  "properties": {
+    "treshold": {
+      "type": "number"
     },
-    "required": ["treshold", "tests"],
-    "definitions": {
-	"test": {
-	    "anyOf": [
-		{
-		    "type": "object",
-		    "properties": {
-			"name": {
-			    "type": "string"
-			},
-			"description": {
-			    "type": "string"
-			},
-			"disabled": {
-			    "type": "boolean"
-			},
-			"true": {
-			    "type": "number"
-			},
-			"false": {
-			    "type": "number"
-			},
-			"path": {
-			    "type": "string"
-			},
-			"options": {
-			    "type": "object"
-			}
-			
-		    },
-		    "additionalProperties": false,
-		    "required": [
-			"path",
-			"true",
-			"false"
-		    ]
-		},
-		{
-		    "type": "object",
-		    "properties": {
-			"name": {
-			    "type": "string"
-			},
-			"description": {
-			    "type": "string"
-			},
-			"disabled": {
-			    "type": "boolean"
-			},
-			"true": {
-			    "type": "number"
-			},
-			"path": {
-			    "type": "string"
-			},
-			"options": {
-			    "type": "object"
-			}
-			
-		    },
-		    "additionalProperties": false,
-		    "required": [
-			"path",
-			"true"
-		    ]
-		},
-		{
-		    "type": "object",
-		    "properties": {
-			"name": {
-			    "type": "string"
-			},
-			"description": {
-			    "type": "string"
-			},
-			"disabled": {
-			    "type": "boolean"
-			},
-			"false": {
-			    "type": "number"
-			},
-			"path": {
-			    "type": "string"
-			},
-			"options": {
-			    "type": "object"
-			}
-			
-		    },
-		    "additionalProperties": false,
-		    "required": [
-			"path",
-			"false"
-		    ]
-		}
-	    ]
-	},
-	"options": {
-	    "type": "object",
-	    "properties": {
-
-		"trim": {
-		    "type": "object",
-		    "properties": {
-
-			"chars": {
-			    "type": "string"
-			},
-			"side": {
-
-			    "description": "If this property is undefined, trim on both ends of the value. If 0, trim from the beginning only. if 1, trim from the end",
-			    "type": "number",
-			    "minimum": 0,
-			    "maximum": 1
-
-			}
-
-		    },
-		    "required": ["chars"]
-		},
-		"truncate": {
-		    "type": "number"
-		},
-		"replace": {
-		    "type": "object",
-		    "properties": {
-			"pattern": {
-			    "type": "string"
-			},
-			"replacement": {
-			    "type": "string"
-			},
-			"flags": {
-			    "type": "string"
-			}
-		    },
-		    "required": ["pattern", "replacement"]
-		},
-		"strict": {
-		    "type": "boolean"
-		},
-		"order": {
-		    "type": "boolean"
-		},
-		"caseSensitive": {
-		    "type": "boolean"
-		},
-		"skipMissing": {
-		    "type": "boolean"
-		},
-		"singleValue": {
-		    "type": "boolean"
-		},
-		"extract": {
-		    "anyOf": [
-			{
-			    "type": "object",
-			    "properties": {
-				"start": {
-				    "type": "number"
-				},
-				"length": {
-				    "type": "number"
-				}
-			    },
-			    "required": ["start", "length"]
-			},
-			{
-			    "type": "object",
-			    "properties": {
-				"start": {
-				    "type": "number"
-				},
-				"length": {
-				    "type": "number"
-				}
-			    },
-			    "required": ["start"]
-			},
-			{
-			    "type": "object",
-			    "properties": {
-				"start": {
-				    "type": "number"
-				},
-				"length": {
-				    "type": "number"
-				}
-			    },
-			    "required": ["length"]
-			}
-		    ]
-		},
-		"multimatch": {
-		    "type": "object",
-		    "properties": {
-			"percentage": {
-			    "type": "number",
-			    "maximum": 100,
-			    "minimum": 0
-			},
-			"leastTotal": {
-			    "type": "boolean"
-			},
-			"respectHierarchy": {
-			    "anyOf": [
-				{
-				    "type": "boolean"
-				},
-				{
-				    "type": "number",
-				    "minimum": 0
-				}
-			    ]
-			}
-		    }
-		}
-	    }
-	}
+    "tests": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/test"
+      }
     }
+  },
+  "required": ["treshold", "tests"],
+  "definitions": {
+    "test": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "true": {
+              "type": "number"
+            },
+            "false": {
+              "type": "number"
+            },
+            "path": {
+              "type": "string"
+            },
+            "options": {
+              "$ref": "#/definitions/options"
+            }
+            
+          },
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "true",
+            "false"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "true": {
+              "type": "number"
+            },
+            "path": {
+              "type": "string"
+            },
+            "options": {
+              "$ref": "#/definitions/options"
+            }
+            
+          },
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "true"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "false": {
+              "type": "number"
+            },
+            "path": {
+              "type": "string"
+            },
+            "options": {
+              "$ref": "#/definitions/options"
+            }
+            
+          },
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "false"
+          ]
+        }
+      ]
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+
+        "trim": {
+          "type": "object",
+          "properties": {
+
+            "chars": {
+              "type": "string"
+            },
+            "side": {
+
+              "description": "If this property is undefined, trim on both ends of the value. If 0, trim from the beginning only. if 1, trim from the end",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+
+            }
+
+          },
+          "required": ["chars"],
+          "additionalProperties": false
+        },
+        "truncate": {
+          "type": "number"
+        },
+        "replace": {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string"
+            },
+            "replacement": {
+              "type": "string"
+            },
+            "flags": {
+              "type": "string"
+            }
+          },
+          "required": ["pattern", "replacement"],
+          "additionalProperties": false
+        },
+        "strict": {
+          "type": "boolean"
+        },
+        "order": {
+          "type": "boolean"
+        },
+        "caseSensitive": {
+          "type": "boolean"
+        },
+        "skipMissing": {
+          "type": "boolean"
+        },
+        "singleValue": {
+          "type": "boolean"
+        },
+        "extract": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "number"
+                },
+                "length": {
+                  "type": "number"
+                }
+              },
+              "required": ["start", "length"],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "number"
+                },
+                "length": {
+                  "type": "number"
+                }
+              },
+              "required": ["start"],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "number"
+                },
+                "length": {
+                  "type": "number"
+                }
+              },
+              "required": ["length"],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "multimatch": {
+          "type": "object",
+          "properties": {
+            "percentage": {
+              "type": "number",
+              "maximum": 100,
+              "minimum": 0
+            },
+            "leastTotal": {
+              "type": "boolean"
+            },
+            "respectHierarchy": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "number",
+                  "minimum": 0
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
 }

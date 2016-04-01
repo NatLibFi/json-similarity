@@ -1,0 +1,37 @@
+{
+  "description": "Should return a true match and 4 points because the other object's multivalue is reduced to single value",
+  "objectA": {
+    "bar": [
+      {
+        "value": "foo"
+      },
+      {
+        "value": "fu"
+      }
+    ]
+  },
+  "objectB": {
+    "bar": [{
+      "value": "foo"
+    }]
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.bar[*].value",
+      "options": {
+        "singleValue": true
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 4,
+    "tests": [{
+      "index": 0,
+      "match": true
+    }]
+  }
+}

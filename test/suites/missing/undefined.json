@@ -1,0 +1,21 @@
+{
+  "description": "Should return a true match and 0 points as the test is skipped because both values are undefined",
+  "objectA": {},
+  "objectB": {},
+  "spec": {
+    "treshold": 0,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.foo"
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 0,
+    "tests": [{
+      "index": 0,
+      "skipped": true
+    }]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Should throw because of invalid JSON path",
+  "objectA": {},
+  "objectB": {},
+  "spec": {
+    "treshold": 5,
+    "tests": [{
+	    "true": 5,
+	    "false": -5,
+	    "path": 0
+	  }]
+  },
+  "error": [{
+		"code": "VALIDATION_INVALID_TYPE",
+		"message": "Invalid type: integer should be string",
+    "data": 0,
+    "path": "$.tests[0].path"
+  }]
+}

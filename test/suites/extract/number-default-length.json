@@ -1,0 +1,30 @@
+{
+  "description": "Should return a true match and 2 points because extracted (With default value for  'length') number values match",
+  "objectA": {
+    "foo": 1234567
+  },
+  "objectB": {
+    "foo": 7774567
+  },
+  "spec": {
+    "treshold": 0,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+      "path": "$.foo",
+      "options": {
+        "extract": {
+          "start": 3
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 2,
+    "tests": [{
+      "index": 0,
+      "match": true
+    }]
+  }
+}

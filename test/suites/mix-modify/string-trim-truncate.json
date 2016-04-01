@@ -1,0 +1,31 @@
+{
+  "description": "Should return a true match and 4 points because strings are now trimmed and truncated",
+  "objectA": {
+    "foo": "foobar"
+  },
+  "objectB": {
+    "foo": "foobar fubar"
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.foo",
+	    "options": {
+        "trim": {
+          "chars": " "
+        },
+		    "truncate": 5
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 4,
+    "tests": [{
+      "index": 0,
+      "match": true
+    }]
+  }
+}

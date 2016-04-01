@@ -1,0 +1,30 @@
+{
+  "description": "Should return a false match and 1 points",
+  "objectA": {
+    "list": ["a", "b", "c", 3]
+  },
+  "objectB": {},
+  "spec": {
+    "treshold": 2,
+    "tests": [
+      {
+	      "true": 2,
+	      "false": -2,
+	      "path": "$.list[0]"
+	    },
+      {
+	      "true": 3,
+	      "false": -3,
+	      "path": "$"
+	    }
+    ]
+  },
+  "result": {
+    "match": false,
+    "points": 0,
+    "tests": [{
+      "index": 0,
+      "match": false
+    }]
+  }
+}

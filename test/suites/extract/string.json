@@ -1,0 +1,31 @@
+{
+  "description": "Should return a true match and 2 points because extracted string values match",
+  "objectA": {
+    "foo": "barian"
+  },
+  "objectB": {
+    "foo": "bar"
+  },
+  "spec": {
+    "treshold": 0,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+      "path": "$.foo",
+      "options": {
+        "extract": {
+          "start": 0,
+          "length": 3
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 2,
+    "tests": [{
+      "index": 0,
+      "match": true
+    }]
+  }
+}

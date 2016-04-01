@@ -1,0 +1,42 @@
+{
+  "description": "Should return a true match and 2 points as the test is skipped because the first value is undefined and skipMissing is true",
+  "objectA": {
+    "fu": "bar"
+  },
+  "objectB": {
+    "foo": "bar",
+    "fu": "bar"
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [
+      {
+	      "true": 2,
+	      "false": -2,
+	      "path": "$.foo",
+        "options": {
+          "skipMissing": true
+        }
+      },
+      {
+	      "true": 2,
+	      "false": -2,
+	      "path": "$.fu"      
+      }
+    ]
+  },
+  "result": {
+    "match": true,
+    "points": 4,
+    "tests": [
+      {
+        "index": 0,
+        "skipped": true
+      },
+      {
+        "index": 1,
+        "match": true
+      }
+    ]
+  }
+}

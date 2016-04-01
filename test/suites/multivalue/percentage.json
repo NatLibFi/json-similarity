@@ -1,0 +1,54 @@
+{
+  "description": "Should return a false match and 0 points because the multivalue percentage average is not large enough",
+  "objectA": {
+    "bar": [
+      {
+        "value": "fing"
+      },
+      {
+        "value": "fang"
+      },
+      {
+        "value": "foom"
+      }
+    ]
+  },
+  "objectB": {
+    "bar": [
+      {
+        "value": "fing"
+      },
+      {
+        "value": "fang"
+      },
+      {
+        "value": "foom"
+      },
+      {
+        "value": "foo"
+      }
+    ]
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.bar[*].value",
+      "options": {
+        "multimatch": {
+          "percentage": 90
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": false,
+    "points": 0,
+    "tests": [{
+      "index": 0,
+      "match": false,
+      "multimatchPercentage": 87.5
+    }]
+  }
+}

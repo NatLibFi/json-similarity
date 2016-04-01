@@ -1,0 +1,31 @@
+{
+  "description": "Should return a true match and 4 points because numbers are now trimmed from the start",
+  "objectA": {
+    "foo": 11234
+  },
+  "objectB": {
+    "foo": 234
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.foo",
+	    "options": {
+		    "trim": {
+          "chars": "14",
+          "side": 0
+	      }
+	    }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 4,
+    "tests": [{
+      "index": 0,
+      "match": true
+    }]
+  }
+}

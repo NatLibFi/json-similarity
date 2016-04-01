@@ -1,0 +1,28 @@
+{
+  "description": "Should return a false match and 0 points because numbers are now truncated from the start",
+  "objectA": {
+    "foo": 3456789
+  },
+  "objectB": {
+    "foo": 34567
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.foo",
+	    "options": {
+		    "truncate": -4
+      }
+    }]
+  },
+  "result": {
+    "match": false,
+    "points": 0,
+    "tests": [{
+      "index": 0,
+      "match": false
+    }]
+  }
+}

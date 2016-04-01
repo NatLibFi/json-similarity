@@ -1,4 +1,4 @@
-# JSON similarity
+# JSON similarity [![Build Status](https://travis-ci.org/NatLibFi/record-loader-prototypes.svg)](https://travis-ci.org/NatLibFi/json-similarity) [![Test Coverage](https://codeclimate.com/github/NatLibFi/json-similarity/badges/coverage.svg)](https://codeclimate.com/github/NatLibFi/json-similarity/coverage)
 
 **IN DEVELOPMENT**
 
@@ -60,6 +60,6 @@ An array of tests to be run. Each test is an object which can have the following
 
 ## License and copyright
 
-Copyright (c) 2015-2016 University Of Helsinki (The National Library Of Finland)
+Copyright (c) 2015-2016 **University Of Helsinki (The National Library Of Finland)**
 
 This project's source code is licensed under the terms of **GNU General Public License Version 3**.

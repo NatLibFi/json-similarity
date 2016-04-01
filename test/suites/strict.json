@@ -1,0 +1,28 @@
+{
+  "description": "Should return a false match and 0 points because values are compared strictly",
+  "objectA": {
+    "foo": "123"
+  },
+  "objectB": {
+    "foo": 123
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.foo",
+	    "options": {
+        "strict": true
+      }
+    }]
+  },
+  "result": {
+    "match": false,
+    "points": 0,
+    "tests": [{
+      "index": 0,
+      "match": false
+    }]
+  }
+}

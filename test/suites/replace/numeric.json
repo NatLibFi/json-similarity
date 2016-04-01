@@ -1,0 +1,30 @@
+{
+  "description": "Should return a true match and 2 points because numeric value is replaced by RegExp",
+  "objectA": {
+    "foo": 12345
+  },
+  "objectB": {
+    "foo": 1234567
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "false": -2,
+	    "path": "$.foo",
+	    "options": {
+        "replace": {
+          "pattern": "5$",
+          "replacement": "567"
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 2,
+    "tests": [{
+      "index": 0,
+      "match": true
+    }]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "description": "Should return a false match and -2 points because RegExp replacement doesn't match",
+  "objectA": {
+    "foo": "fubar"
+  },
+  "objectB": {
+    "foo": "bar"
+  },
+  "spec": {
+    "treshold": 0,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.foo",
+	    "options": {
+        "replace": {
+          "pattern": "foo",
+          "replacement": ""
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": false,
+    "points": -2,
+    "tests": [{
+      "index": 0,
+      "match": false
+    }]
+  }
+}

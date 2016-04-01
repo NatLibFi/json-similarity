@@ -1,0 +1,64 @@
+{
+  "description": "Should return a true match and 4 points because respectHierarchy is set to false",
+  "objectA": {
+    "foo": [
+	    {
+		    "values": [
+		      {
+			      "value": "foo"
+		      },
+		      {
+			      "value": "bar"
+		      }
+		    ]
+	    }
+	  ]
+  },
+  "objectB": {
+    "foo": [
+	    {
+		    "values": [
+		      {
+			      "value": "fur"
+		      },
+		      {
+			      "value": "bar"
+		      }
+		    ]
+	    },
+	    {
+		    "values": [
+		      {
+			      "value": "foo"
+		      },
+		      {
+			      "value": "ball"
+		      }
+		    ]
+	    }
+	  ]
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+      "path": "$.foo[*].values[*].value",
+      "options": {
+        "multimatch": {
+          "respectHierarchy": false,
+          "percentage": 50
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 4,
+    "tests": [{
+      "index": 0,
+      "match": true,
+      "multimatchPercentage": 50
+    }]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "description": "Should return a true match and 2 points because extracted array values match",
+  "objectA": {
+    "foo": [9, 8, 6, 4, 5]
+  },
+  "objectB": {
+    "foo": [1, 2, 3, 4, 5]
+  },
+  "spec": {
+    "treshold": 0,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+      "path": "$.foo",
+      "options": {
+        "extract": {
+          "start": 3,
+          "length": 2
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 2,
+    "tests": [{
+      "index": 0,
+      "match": true
+    }]
+  }
+}

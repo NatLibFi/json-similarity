@@ -1,0 +1,40 @@
+{
+  "description": "Should return a true match without any options",
+  "objectA": {
+    "list": ["a", "b", "c"],
+    "value": 0
+  },
+  "objectB": {
+    "list": ["a", "b", "c"],
+    "value": 1
+  },
+  "spec": {
+    "treshold": 4,
+    "tests": [
+	    {
+	      "true": 2,
+	      "false": -2,
+	      "path": "$.list[0]"
+	    },
+	    {
+	      "true": 2,
+	      "false": -2,
+	      "path": "$.value"
+	    }
+    ]    
+  },
+  "result": {
+    "match": true,
+        "points": 4,
+        "tests": [
+          {
+            "index": 0,
+            "match": true
+          },
+          {
+            "index": 1,
+            "match": false
+          }
+        ]
+  }
+}

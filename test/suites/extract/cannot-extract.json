@@ -1,0 +1,28 @@
+{
+  "description": "Should return a false match and 0 points because other object's value cannot be extracted",
+  "objectA": {},
+  "objectB": {
+    "foo": "foobar"
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+      "path": "$.foo",
+      "options": {
+        "extract": {
+          "start": 2
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": false,
+    "points": 0,
+    "tests": [{
+      "index": 0,
+      "match": false
+    }]
+  }
+}

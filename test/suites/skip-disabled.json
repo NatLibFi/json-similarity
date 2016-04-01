@@ -1,0 +1,40 @@
+{
+  "description": "Should skip disabled tests",
+  "objectA": {
+    "foo": "bar"
+  },
+  "objectB": {
+    "foo": "bar"
+  },
+  "spec": {
+    "treshold": 5,
+    "tests": [
+      {
+        "disabled": true,
+	      "true": 5,
+	      "false": -5,
+	      "path": "$.bar"
+	    },
+      {
+	      "true": 5,
+	      "false": -5,
+	      "path": "$.foo"
+      },
+      {
+        "disabled": true,
+	      "true": 5,
+	      "false": -5,
+	      "path": "$.foobar"
+	    }
+    ]
+  },
+  "result": {
+    "match": true,
+    "points": 10,
+    "tests": [{
+      "index": 1,
+      "match": true
+    }]
+  }
+
+}

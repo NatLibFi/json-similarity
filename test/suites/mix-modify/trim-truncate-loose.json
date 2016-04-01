@@ -1,0 +1,32 @@
+{
+  "description": "Should return a true match and 4 points because values are now trimmed, truncated and loosely equal, because strict-option is false",
+  "objectA": {
+    "foo": 1234577
+  },
+  "objectB": {
+    "foo": "a1234567"
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.foo",
+	    "options": {
+        "strict": false,
+        "trim": {
+          "chars": "a"
+        },
+		    "truncate": 3
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 4,
+    "tests": [{
+      "index": 0,
+      "match": true
+    }]
+  }
+}
