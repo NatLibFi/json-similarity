@@ -5,7 +5,8 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
     reporters: ['progress', 'coverage'],
     preprocessors: {
-      'lib/*.js': ['coverage']
+      'lib/*.js': 'coverage',
+      'test/browser/main.js': 'requirejs'
     },
     coverageReporter: {
       subdir: 'browser',
@@ -17,6 +18,15 @@ module.exports = function(config) {
           type: 'html'
         }
       ]
+    },
+    requirejsPreprocessor: {
+      config: {
+        baseUrl: '/base',
+        paths: {
+          text: 'node_modules/requirejs-plugins/lib/text'
+        }
+      },
+      testRegexp: '^/base/test/[^/].+\.spec\.js$'
     },
     client: {
       mocha: {
@@ -34,7 +44,11 @@ module.exports = function(config) {
         included: false
       },
       {
-        pattern: 'test/**/*.js',
+        pattern: 'test/*.js',
+        included: false
+      },
+      {
+        pattern: 'test/browser/*.spec.js',
         included: false
       },
       {

@@ -24,7 +24,7 @@
   "scripts": {
     "lint": "jshint .",
     "test-nodejs": "npm run generate-suites-index && istanbul cover --dir coverage/nodejs _mocha -- test/nodejs/main.spec.js",
-    "test-browser": "npm run generate-suites-index && karma start",
+    "test-browser": "npm run generate-requirejs-config && npm run generate-suites-index && karma start",
     "test": "npm run test-nodejs && npm run test-browser",
     "cover-nodejs": "npm run test-nodejs && istanbul check-coverage coverage/nodejs/coverage.json",
     "cover-browser": "npm run test-browser && istanbul check-coverage coverage/browser/coverage-final.json",
@@ -33,7 +33,8 @@
     "travisci": "npm run check",
     "publish-to-npm": "npm install && npm run check && npm publish",
     "combine-coverage": "istanbul-combine -d coverage/combined -r html -r lcov -r json coverage/nodejs/coverage.json coverage/browser/coverage-final.json",
-    "generate-suites-index": "bin/generate-suites-index > test/suites.json"
+    "generate-suites-index": "bin/generate-suites-index > test/suites.json",
+    "generate-requirejs-config": "requirejs-configurator --npm --include-dev-deps > test/browser/main.js"
   },
   "dependencies": {
     "jjv": ">=1.0.2 <1.1",
@@ -55,7 +56,9 @@
     "karma-mocha": "^0.2.1",
     "karma-requirejs": "^0.2.3",
     "karma-phantomjs-launcher": "^0.2.3",
+    "karma-requirejs-preprocessor": "https://github.com/natlibfi-arlehiko/karma-requirejs-preprocessor#regexp",
     "phantomjs-prebuilt": "^2.1.5",
+    "requirejs-configurator": "https://github.com/natlibfi-arlehiko/requirejs-configurator#dev-deps",
     "codeclimate-test-reporter": "^0.1.1"
   }
 }

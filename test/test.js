@@ -33,7 +33,7 @@
   if (typeof define === 'function' && define.amd) {
     define([
       'es6-polyfills/lib/polyfills/promise',
-      'chai',
+      'chai/chai',
       '../lib/main'
     ], factory);
   } else if (typeof module === 'object' && module.exports) {
