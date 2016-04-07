@@ -226,8 +226,7 @@
                   "type": "boolean"
                 },
                 {
-                  "type": "number",
-                  "minimum": 0
+                  "type": "number"
                 }
               ]
             }
