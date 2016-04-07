@@ -1,4 +1,4 @@
-# JSON similarity [![Build Status](https://travis-ci.org/NatLibFi/record-loader-prototypes.svg)](https://travis-ci.org/NatLibFi/json-similarity) [![Test Coverage](https://codeclimate.com/github/NatLibFi/json-similarity/badges/coverage.svg)](https://codeclimate.com/github/NatLibFi/json-similarity/coverage)
+# JSON similarity [![Build Status](https://travis-ci.org/NatLibFi/json-similarity.svg)](https://travis-ci.org/NatLibFi/json-similarity) [![Test Coverage](https://codeclimate.com/github/NatLibFi/json-similarity/badges/coverage.svg)](https://codeclimate.com/github/NatLibFi/json-similarity/coverage)
 
 **IN DEVELOPMENT**
 
