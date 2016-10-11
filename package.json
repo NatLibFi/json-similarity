@@ -37,11 +37,8 @@
     "generate-requirejs-config": "requirejs-configurator --npm --include-dev-deps > test/browser/main.js"
   },
   "dependencies": {
-    "jjv": ">=1.0.2 <1.1",
-    "jjve": "^0.5.0",
-    "jsonpath": "^0.2.0",
-    "es6-polyfills": "^1.0.1",
-    "requirejs-plugins": "^1.0.2",
+    "jsonpath": "^0.2.7",
+    "es6-polyfills": "^1.1.0",
     "object-comparison": "https://github.com/NatLibFi/object-comparison"
   },
   "devDependencies": {
