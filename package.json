@@ -34,7 +34,7 @@
     "publish-to-npm": "npm install && npm run check && npm publish",
     "combine-coverage": "istanbul-combine -d coverage/combined -r html -r lcov -r json coverage/nodejs/coverage.json coverage/browser/coverage-final.json",
     "generate-suites-index": "bin/generate-suites-index > test/suites.json",
-    "generate-requirejs-config": "requirejs-configurator --npm --include-dev-deps > test/browser/main.js"
+    "generate-requirejs-config": "requirejs-configurator --npm -D -P > test/browser/main.js"
   },
   "dependencies": {
     "jsonpath": "^0.2.7",
@@ -53,9 +53,10 @@
     "karma-mocha": "^0.2.1",
     "karma-requirejs": "^0.2.3",
     "karma-phantomjs-launcher": "^0.2.3",
-    "karma-requirejs-preprocessor": "https://github.com/natlibfi-arlehiko/karma-requirejs-preprocessor#regexp",
+    "karma-requirejs-preprocessor": "^0.0.2",
     "phantomjs-prebuilt": "^2.1.5",
-    "requirejs-configurator": "https://github.com/natlibfi-arlehiko/requirejs-configurator#dev-deps",
+    "requirejs": "^2.3.2",
+    "requirejs-configurator": "https://github.com/natlibfi-arlehiko/requirejs-configurator#peer-deps",
     "codeclimate-test-reporter": "^0.1.1"
   }
 }

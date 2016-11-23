@@ -1,0 +1,41 @@
+{
+  "description": "Should return a false match and 0 points because the other object's multivalue comparison is forced",
+  "objectA": {
+    "bar": [
+      {
+        "value": "foo"
+      },
+      {
+        "value": "fu"
+      }
+    ]
+  },
+  "objectB": {
+    "bar": [{
+      "value": "foo"
+    }]
+  },
+  "spec": {
+    "treshold": 2,
+    "tests": [{
+	    "true": 2,
+	    "false": -2,
+	    "path": "$.bar[*].value",
+      "options": {
+        "multimatch": {
+          "force": true,
+          "leastTotal": true
+        }
+      }
+    }]
+  },
+  "result": {
+    "match": true,
+    "points": 4,
+    "tests": [{
+      "index": 0,
+      "match": true,
+      "multimatchPercentage": 100
+    }]
+  }
+}
