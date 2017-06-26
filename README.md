@@ -1,6 +1,4 @@
-# JSON similarity [![Build Status](https://travis-ci.org/NatLibFi/json-similarity.svg)](https://travis-ci.org/NatLibFi/json-similarity) [![Test Coverage](https://codeclimate.com/github/NatLibFi/json-similarity/badges/coverage.svg)](https://codeclimate.com/github/NatLibFi/json-similarity/coverage)
-
-**IN DEVELOPMENT**
+# JSON similarity [![NPM Version](https://img.shields.io/npm/v/json-similarity.svg)](https://npmjs.org/package/json-similarity) [![Build Status](https://travis-ci.org/NatLibFi/json-similarity.svg)](https://travis-ci.org/NatLibFi/json-similarity) [![Test Coverage](https://codeclimate.com/github/NatLibFi/json-similarity/badges/coverage.svg)](https://codeclimate.com/github/NatLibFi/json-similarity/coverage)
 
 Compute similarity of JSON objects with tests that yield points. Each test add or subtracts points. If total number of points becomes less than the treshold, the objects are deemed not similar. If all tests pass without the total number of points becoming less than the treshold, the objects are similar.
 
@@ -60,6 +58,6 @@ An array of tests to be run. Each test is an object which can have the following
 
 ## License and copyright
 
-Copyright (c) 2015-2016 **University Of Helsinki (The National Library Of Finland)**
+Copyright (c) 2015-2017 **University Of Helsinki (The National Library Of Finland)**
 
 This project's source code is licensed under the terms of **GNU General Public License Version 3**.
