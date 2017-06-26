@@ -15,7 +15,7 @@
     "url": "git@github.com:NatLibFi/json-similarity.git"
   },
   "license": "GPL-3.0+",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/main",
   "bin": {
     "json-similarity": "./bin/json-similarity",
