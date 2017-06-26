@@ -14,8 +14,8 @@
     "type": "git",
     "url": "git@github.com:NatLibFi/json-similarity.git"
   },
-  "license": " GPL-3.0",
-  "version": "0.0.1",
+  "license": "GPL-3.0+",
+  "version": "1.0.0",
   "main": "lib/main",
   "bin": {
     "json-similarity": "./bin/json-similarity",
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "jsonpath": "^0.2.7",
-    "es6-polyfills": "^1.1.0",
+    "es6-polyfills": "^2.0.0",
     "object-comparison": "https://github.com/NatLibFi/object-comparison"
   },
   "devDependencies": {
