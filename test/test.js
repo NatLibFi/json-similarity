@@ -32,13 +32,13 @@
   
   if (typeof define === 'function' && define.amd) {
     define([
-      'es6-polyfills/lib/polyfills/promise',
+      '@natlibfi/es6-polyfills/lib/polyfills/promise',
       'chai/chai',
       '../lib/main'
     ], factory);
   } else if (typeof module === 'object' && module.exports) {
     module.exports = factory(
-      require('es6-polyfills/lib/polyfills/promise'),
+      require('@natlibfi/es6-polyfills/lib/polyfills/promise'),
       require('chai'),
       require('../lib/main')
     );

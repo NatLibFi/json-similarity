@@ -1,4 +1,4 @@
-define(['es6-polyfills/lib/polyfills/promise', '../test'], function(Promise, runTests) {
+define(['@natlibfi/es6-polyfills/lib/polyfills/promise', '../test'], function(Promise, runTests) {
 
   'use strict';
  

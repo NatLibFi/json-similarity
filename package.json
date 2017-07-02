@@ -1,5 +1,5 @@
 {
-  "name": "json-similarity",
+  "name": "@natlibfi/json-similarity",
   "description": "Compute similarity of JSON objects with tests that yield points",
   "author": {
     "name": "The National Library of Finland"
@@ -15,7 +15,7 @@
     "url": "git@github.com:NatLibFi/json-similarity.git"
   },
   "license": "GPL-3.0+",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/main",
   "bin": {
     "json-similarity": "./bin/json-similarity",
@@ -31,14 +31,14 @@
     "cover": "npm run test && npm run combine-coverage && istanbul check-coverage coverage/combined/coverage-final.json",
     "check": "npm run lint && npm run cover",
     "travisci": "npm run check",
-    "publish-to-npm": "npm install && npm run check && npm publish",
+    "publish-to-npm": "npm install && npm run check && npm publish --access=public",
     "combine-coverage": "istanbul-combine -d coverage/combined -r html -r lcov -r json coverage/nodejs/coverage.json coverage/browser/coverage-final.json",
     "generate-suites-index": "bin/generate-suites-index > test/suites.json",
     "generate-requirejs-config": "requirejs-configurator --npm -D -P > test/browser/main.js"
   },
   "dependencies": {
     "jsonpath": "^0.2.7",
-    "es6-polyfills": "^2.0.0",
+    "@natlibfi/es6-polyfills": "^2.0.0",
     "object-comparison": "https://github.com/NatLibFi/object-comparison"
   },
   "devDependencies": {
