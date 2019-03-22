@@ -1,3 +1,4 @@
+# DEPRECATED
 # JSON similarity [![NPM Version](https://img.shields.io/npm/v/@natlibfi/json-similarity.svg)](https://npmjs.org/package/json-similarity) [![Build Status](https://travis-ci.org/NatLibFi/json-similarity.svg)](https://travis-ci.org/NatLibFi/json-similarity) [![Test Coverage](https://codeclimate.com/github/NatLibFi/json-similarity/badges/coverage.svg)](https://codeclimate.com/github/NatLibFi/json-similarity/coverage)
 
 Compute similarity of JSON objects with tests that yield points. Each test add or subtracts points. If total number of points becomes less than the treshold, the objects are deemed not similar. If all tests pass without the total number of points becoming less than the treshold, the objects are similar.
